@@ -14,7 +14,7 @@ export default function Pricing() {
             <p className={`mt-2 min-h-12 text-sm ${p.popular ? 'text-white/70' : 'text-mute'}`}>{p.desc}</p>
             <p className="mt-5 text-3xl font-extrabold">{p.price}</p>
             <ul className="my-6 flex-1 space-y-3">{p.features.map(f => <li key={f} className="flex gap-3 text-sm"><Check size={18} className={`shrink-0 ${p.popular ? 'text-white' : 'text-bright'}`} />{f}</li>)}</ul>
-            <a href={WA_MSG(`Halo Reboot.id, saya tertarik paket ${p.name}.`)} target="_blank" rel="noreferrer" className={`rounded-xl py-3 text-center font-semibold transition ${p.popular ? 'bg-bright text-white hover:bg-royal' : 'bg-royal text-white hover:bg-bright'}`}>Pilih {p.name}</a>
+            <a href={WA_MSG(p.msg)} target="_blank" rel="noreferrer" className={`rounded-xl py-3 text-center font-semibold transition ${p.popular ? 'bg-bright text-white hover:bg-royal' : 'bg-royal text-white hover:bg-bright'}`}>Pilih {p.name}</a>
           </article></Reveal>))}</div>
     </div></section>
   )

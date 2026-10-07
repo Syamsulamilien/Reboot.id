@@ -1,4 +1,4 @@
 // Ganti XXXXXXXXXXX dengan nomor WhatsApp (format 628xxxxxxxxxx)
-export const WA = 'https://wa.me/XXXXXXXXXXX'
-export const WA_MSG = (t = 'Halo Reboot.id, saya ingin konsultasi instalasi Windows.') => `${WA}?text=${encodeURIComponent(t)}`
+export const WA = 'https://wa.me/085609162927'
+export const WA_MSG = (t = 'Halo Reboot.id, saya mau konsultasi dulu soal instalasi Windows. Boleh tanya-tanya?') => `${WA}?text=${encodeURIComponent(t)}`
 export const INSTAGRAM = 'https://instagram.com/reboot.id'
