@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-deep:#071A3D; --color-navy:#0B2A5B; --color-royal:#1455A0; --color-bright:#1E73D8;
+  --color-lightb:#EAF3FF; --color-softb:#F4F8FF; --color-offwhite:#F8FAFC;
+  --color-ink:#0F172A; --color-mute:#64748B; --color-line:#DCE6F2;
+}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{font-family:var(--font-sans);color:var(--color-ink);background:#fff;overflow-x:hidden}
+:focus-visible{outline:2px solid var(--color-bright);outline-offset:3px;border-radius:8px}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@keyframes blurin{from{opacity:0;filter:blur(10px);transform:translateY(8px)}to{opacity:1;filter:blur(0);transform:none}}
+.blurword{display:inline-block;opacity:0;animation:blurin .7s ease forwards}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-16px)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.blurword{opacity:1;animation:none}.drift{animation:none!important}}
