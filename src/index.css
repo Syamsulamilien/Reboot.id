@@ -1,16 +1,143 @@
 @import "tailwindcss";
+
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --color-deep:#071A3D; --color-navy:#0B2A5B; --color-royal:#1455A0; --color-bright:#1E73D8;
-  --color-lightb:#EAF3FF; --color-softb:#F4F8FF; --color-offwhite:#F8FAFC;
-  --color-ink:#0F172A; --color-mute:#64748B; --color-line:#DCE6F2;
+
+  --color-deep: #071A3D;
+  --color-navy: #0B2A5B;
+  --color-royal: #1455A0;
+  --color-bright: #1E73D8;
+  --color-lightb: #EAF3FF;
+  --color-softb: #F4F8FF;
+  --color-offwhite: #F8FAFC;
+  --color-ink: #0F172A;
+  --color-mute: #64748B;
+  --color-line: #DCE6F2;
 }
-html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{font-family:var(--font-sans);color:var(--color-ink);background:#fff;overflow-x:hidden}
-:focus-visible{outline:2px solid var(--color-bright);outline-offset:3px;border-radius:8px}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-@keyframes blurin{from{opacity:0;filter:blur(10px);transform:translateY(8px)}to{opacity:1;filter:blur(0);transform:none}}
-.blurword{display:inline-block;opacity:0;animation:blurin .7s ease forwards}
-@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-16px)}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.blurword{opacity:1;animation:none}.drift{animation:none!important}}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-bright);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Animasi reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animasi blur teks */
+@keyframes blurin {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+.blurword {
+  display: inline-block;
+  opacity: 0;
+  animation: blurin 0.7s ease forwards;
+}
+
+/* Animasi background */
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, -16px);
+  }
+}
+
+/* ANIMASI GELOMBANG LINGKARAN REBOOT.ID */
+
+.hero-orbit {
+  pointer-events: none;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Lingkaran luar: mengecil lalu melebar */
+.hero-orbit-outer {
+  animation: orbit-expand 4s ease-in-out infinite;
+}
+
+/* Lingkaran tengah: bergerak bergantian */
+.hero-orbit-inner {
+  animation: orbit-expand 4s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+/* Lingkaran ketiga: efek gelombang susulan */
+.hero-orbit-third {
+  animation: orbit-expand 4s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+/* Efek mengembang dan mengecil */
+@keyframes orbit-expand {
+  0%, 100% {
+    transform: scale(0.78);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+/* Cahaya di belakang logo ikut berdenyut */
+.hero-glow {
+  animation: hero-glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes hero-glow-pulse {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Hormati pengaturan pengurangan animasi */
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit,
+  .hero-glow {
+    animation: none !important;
+  }
+}
