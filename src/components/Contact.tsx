@@ -1,7 +1,7 @@
 import { MessageCircle, Instagram, MapPin, Clock } from 'lucide-react'
 import { Reveal, SectionHead, wrap } from './ui'
 import { WA, WA_MSG, INSTAGRAM } from '../lib/wa'
-const info = [[MessageCircle,'WhatsApp','+62 XXX-XXXX-XXXX'],[Instagram,'Instagram','@reboot.id'],[MapPin,'Lokasi','Alamat / area layanan (isi nanti)'],[Clock,'Jam layanan','Senin–Sabtu, 09.00–20.00 (contoh)']] as const
+const info = [[MessageCircle,'WhatsApp','+62 857-7127-6106'],[Instagram,'Instagram','@reboot.id'],[MapPin,'Lokasi','Alamat / area layanan (isi nanti)'],[Clock,'Jam layanan','Senin–Sabtu, 09.00–20.00 (contoh)']] as const
 export default function Contact() {
   return (
     <section id="kontak" className="bg-white py-20 sm:py-28"><div className={wrap}>
