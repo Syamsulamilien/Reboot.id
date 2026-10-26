@@ -9,7 +9,7 @@ Data perangkat saya:
 - Kondisi saat ini:
 
 Mohon info harga dan jadwal pengerjaannya. Terima kasih!` },
-  { name: 'Standard', desc: 'Pilihan seimbang untuk kebutuhan harian.', price: 'Rp 125.000', popular: true,
+  { name: 'Standard', desc: 'Pilihan seimbang untuk kebutuhan harian.', price: 'Rp 110.000', popular: true,
     features: ['Install Windows', 'Driver lengkap', 'Aplikasi dasar', 'Windows configuration', 'Quality check'],
     msg: `Halo Reboot.id, saya mau pesan paket *STANDARD* (Install Windows + driver lengkap + aplikasi dasar + konfigurasi + quality check).
 
@@ -19,7 +19,7 @@ Data perangkat saya:
 - Aplikasi yang dibutuhkan:
 
 Mohon info harga dan jadwal pengerjaannya. Terima kasih!` },
-  { name: 'Complete', desc: 'Cocok untuk pengguna yang ingin perangkat langsung siap digunakan.', price: 'Rp 145.000', popular: false,
+  { name: 'Complete', desc: 'Cocok untuk pengguna yang ingin perangkat langsung siap digunakan.', price: 'Rp 120.000', popular: false,
     features: ['Install Windows', 'Driver lengkap', 'Aplikasi dasar', 'Windows configuration', 'Optimization', 'Quality check'],
     msg: `Halo Reboot.id, saya mau pesan paket *COMPLETE* (Install Windows + driver lengkap + aplikasi dasar + konfigurasi + optimization + quality check).
 
